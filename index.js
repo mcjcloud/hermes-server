@@ -128,6 +128,8 @@ app.post('/bags/:bag_id?', (req, res) => {
     const bag = req.body.bag;
     const bag_id = req.params.bag_id;
 
+    console.log('data: ', JSON.stringify(req.body));
+
     // if a bag id is given, update that bag
     if (!!bag_id) {
         getBag(bag_id)

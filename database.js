@@ -131,6 +131,7 @@ function createBag(bag) {
  * @returns {Promise} containing the result
  */
 function updateBag(bag_id, bag) {
+    console.log('updat: ', bag);
     return createConnection()
     .then(conn => new Promise((resolve, reject) => {
         let db = conn.db(env.DB_NAME);
@@ -208,7 +209,7 @@ function getBagsByUserId(user_id) {
     .then(conn => new Promise((resolve, reject) => {
         const db = conn.db(env.DB_NAME);
         db.collection('bags')
-        .find({ user_id })
+        .find({ 'user_id': user_id })
         .toArray((err, result) => {
             if (err) reject(err);
             else resolve(result);
