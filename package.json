@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mcjcloud/hermes-server/issues"
   },
-  "homepage": "https://github.com/mcjcloud/hermes-server#readme"
+  "homepage": "https://github.com/mcjcloud/hermes-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8",
+    "swagger-ui-express": "^4.0.1"
+  }
 }

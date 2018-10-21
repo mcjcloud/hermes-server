@@ -1,0 +1,94 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Hermes API",
+        "description": "An API"
+    },
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/bags": {
+            "get": {
+                "summary": "Gets all available bags",
+                "description": "Returns all bag objects in an array",
+                "responses": {
+                    "200": {
+                        "description": "A list of Bag",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "bag_id": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "steps": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "completed": {
+                                                    "type": "boolean"
+                                                },
+                                                "scanner_id": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add a bag to the database",
+                "description": "Create a bag object",
+                "responses": {
+                    "200": {
+                        "description": "A list of Bag",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "bag_id": {
+                                        "type": "string"
+                                    },
+                                    "user_id": {
+                                        "type": "string"
+                                    },
+                                    "steps": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "completed": {
+                                                    "type": "boolean"
+                                                },
+                                                "scanner_id": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
